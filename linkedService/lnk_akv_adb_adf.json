@@ -1,0 +1,10 @@
+{
+	"name": "lnk_akv_adb_adf",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://akv-adb-adf.vault.azure.net/"
+		}
+	}
+}
