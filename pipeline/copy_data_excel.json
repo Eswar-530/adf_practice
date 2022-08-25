@@ -38,6 +38,62 @@
 					},
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Year",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "GDP_In_Billion_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GDP_In_Billion_USD",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 0,
+									"precision": 18
+								}
+							},
+							{
+								"source": {
+									"name": "Per_Capita_in_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Per_Capita_in_USD",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 0,
+									"precision": 18
+								}
+							},
+							{
+								"source": {
+									"name": "Percentage_Growth",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Percentage_Growth",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 0,
+									"precision": 18
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -57,6 +113,33 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "GDP_DATA_COPY",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Copy data1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/eswar.rasetti@outlook.com/GDP_DATA"
+				},
+				"linkedServiceName": {
+					"referenceName": "lnk_adb_adf",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": []
