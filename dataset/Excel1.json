@@ -1,0 +1,37 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Indian GDP_Data.xlsx",
+				"container": "practice"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "emp_no",
+				"type": "String"
+			},
+			{
+				"name": "emp_name",
+				"type": "String"
+			},
+			{
+				"name": "sal",
+				"type": "String"
+			},
+			{
+				"name": "dept",
+				"type": "String"
+			}
+		]
+	}
+}
