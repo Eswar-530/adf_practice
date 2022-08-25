@@ -96,7 +96,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "TAB_GDP_DATA",
 						"type": "DatasetReference"
 					}
 				]

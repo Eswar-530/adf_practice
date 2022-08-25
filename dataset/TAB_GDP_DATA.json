@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1",
+	"name": "TAB_GDP_DATA",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
@@ -29,7 +29,7 @@
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "emp"
+			"table": "GDP_DATA"
 		}
 	}
 }
