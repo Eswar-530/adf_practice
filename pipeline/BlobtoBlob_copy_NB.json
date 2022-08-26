@@ -1,0 +1,28 @@
+{
+	"name": "BlobtoBlob_copy_NB",
+	"properties": {
+		"activities": [
+			{
+				"name": "blob2blob",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/eswar.rasetti@outlook.com/BlobToBlobCopy"
+				},
+				"linkedServiceName": {
+					"referenceName": "lnk_adb_adf",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}
